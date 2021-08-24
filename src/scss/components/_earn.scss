@@ -1,0 +1,151 @@
+.earn {
+  padding-bottom: 147px;
+
+  @media (max-width: 1450px) {
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: 1200px) {
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 991px) {
+    padding-bottom: 30px;
+  }
+}
+
+.earn__title {
+  @include title;
+  @include max-width(785px);
+  margin-bottom: 55px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.earn__text {
+  @include text;
+  margin-bottom: 65px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &_top {
+    @include max-width(560px);
+  }
+
+  &_bottom {
+    @include max-width(580px);
+  }
+}
+
+.earn__list {
+  @include reset-list;
+  display: flex;
+  justify-content: center;
+  gap: 21px;
+  margin-bottom: 70px;
+  position: relative;
+  flex-wrap: wrap;
+
+  @media (max-width: 991px) {
+    margin-bottom: 30px;
+  }
+
+  &::before {
+    content: url('/src/img/bgs/earn-bg.png');
+    z-index: -1;
+    position: absolute;
+    right: -329px;
+    top: -254px;
+
+    @media (max-width: 767px) {
+      content: none;
+    }
+  }
+
+  &::after {
+    content: url('/src/img/earn-leaf.png');
+    z-index: 1;
+    position: absolute;
+    top: 170px;
+    right: 364px;
+
+    @media (max-width: 1450px) {
+      content: none;
+    }
+  }
+}
+
+.earn__item {
+  box-shadow: 0 0 80px 0 rgba(0, 0, 0, 0.07);
+  background-color: white;
+  position: relative;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-bottom: 30px;
+  padding-right: 55px;
+  @include bg;
+  @include max-width(466px);
+  min-height: 303px;
+  overflow: hidden;
+  font-weight: 300;
+  line-height: 26px;
+
+  @media (max-width: 575px) {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    br {
+      display: none;
+    }
+  }
+
+  &:nth-child(1) {
+    background-image: url('/src/img/icons/earn/1.jpg');
+
+    &::before {
+      content: '1';
+      font-family: 'Acrom';
+      position: absolute;
+      bottom: -18px;
+      right: 18px;
+      font-size: 150px;
+      line-height: 104px;
+      font-weight: bold;
+      color: rgba(139, 181, 179, 0.1);
+    }
+  }
+
+  &:nth-child(2) {
+    background-image: url('/src/img/icons/earn/2.jpg');
+    padding-top: 130px;
+
+    &::before {
+      content: '2';
+      font-family: 'Acrom';
+      position: absolute;
+      top: -18px;
+      right: 18px;
+      font-size: 150px;
+      line-height: 104px;
+      font-weight: bold;
+      color: rgba(139, 181, 179, 0.1);
+    }
+  }
+
+  &:nth-child(3) {
+    background-image: url('/src/img/icons/earn/3.jpg');
+
+    &::before {
+      content: '3';
+      font-family: 'Acrom';
+      position: absolute;
+      top: 45px;
+      right: -28px;
+      font-size: 150px;
+      line-height: 104px;
+      font-weight: bold;
+      color: rgba(139, 181, 179, 0.1);
+    }
+  }
+}

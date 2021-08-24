@@ -48,12 +48,29 @@
   }
 
   @media (max-width: 575px) {
-    line-height: 43px;
-    font-size: 34px;
+    line-height: 32px;
+    font-size: 28px;
     margin-bottom: 20px;
   }
 
   span {
     color: $red;
+  }
+}
+
+@mixin text {
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 300;
+
+  @media (max-width: 991px) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 30px;
   }
 }

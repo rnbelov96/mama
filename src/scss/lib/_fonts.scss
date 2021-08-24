@@ -47,3 +47,12 @@
     url('../fonts/ProximaSoft-Bold.woff2') format('woff2'),
     url('../fonts/ProximaSoft-Bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
+@font-face {
+  font-family: 'Acrom';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local(''),
+    url('../fonts/Acrom-Bold.ttf') format('truetype')
+}
