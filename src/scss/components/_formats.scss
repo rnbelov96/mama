@@ -1,0 +1,263 @@
+.formats {
+  padding-top: 140px;
+  padding-bottom: 265px;
+
+  @media (max-width: 1450px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: 1200px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 991px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.formats__title {
+  margin-bottom: 55px;
+
+  text-align: center;
+  font-family: 'ProximaSoft';
+  color: $green;
+  font-size: 60px;
+  line-height: 68px;
+
+  @media (max-width: 991px) {
+    line-height: 55px;
+    font-size: 55px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 767px) {
+    line-height: 50px;
+    font-size: 45px;
+  }
+
+  @media (max-width: 575px) {
+    line-height: 43px;
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+
+  span {
+    color: $red;
+  }
+}
+
+.formats__text {
+  @include max-width(630px);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 85px;
+
+  @media (max-width: 991px) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 30px;
+  }
+}
+
+.formats__list {
+  @include reset-list;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: url('/src/img/bgs/formats-bg.png');
+    z-index: -1;
+    left: -417px;
+    top: -235px;
+
+    @media (max-width: 1450px) {
+      left: -117px;
+      top: 5px;
+    }
+
+    @media (max-width: 991px) {
+      content: none;
+    }
+  }
+}
+
+.formats__item {
+  @include max-width(700px);
+  min-height: 440px;
+  background-color: #f1f1f1;
+  padding-top: 66px;
+  padding-left: 50px;
+  padding-right: 65px;
+  padding-bottom: 45px;
+  position: relative;
+
+  @media (max-width: 767px) {
+    border-top: solid 10px #6fbe39;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media (max-width: 575px) {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+  }
+
+  &:first-child {
+    z-index: 2;
+
+    &::before {
+      position: absolute;
+      content: url('/src/img/formats-meat.png');
+      bottom: -193px;
+      right: -69px;
+
+      @media (max-width: 767px) {
+        content: none;
+      }
+    }
+
+    .formats__item-title {
+      &::before {
+        width: 236px;
+        height: 10px;
+        left: -250px;
+      }
+      &::after {
+        width: 236px;
+        height: 10px;
+        right: -250px;
+      }
+    }
+  }
+
+  &:last-child {
+    z-index: 1;
+
+    &::before {
+      position: absolute;
+      content: url('/src/img/formats-leaf.png');
+      top: 93px;
+      right: -73px;
+
+      @media (max-width: 767px) {
+        content: none;
+      }
+    }
+
+    .formats__item-title {
+      width: 582px;
+      &::before {
+        width: 52px;
+        height: 10px;
+        left: -59px;
+      }
+      &::after {
+        width: 52px;
+        height: 10px;
+        right: -59px;
+      }
+
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.formats__item-title {
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  font-family: 'ProximaSoft';
+  margin-bottom: 0;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0;
+
+  @media (max-width: 767px) {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    transform: translateX(0%);
+    margin-bottom: 20px;
+    font-size: 40px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 32px;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    background-color: #6fbe39;
+    top: 58%;
+    transform: translateY(-50%);
+
+    @media (max-width: 767px) {
+      content: none;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    background-color: #6fbe39;
+    top: 58%;
+    transform: translateY(-50%);
+
+    @media (max-width: 767px) {
+      content: none;
+    }
+  }
+}
+
+.formats__item-list {
+  @include reset-list;
+}
+
+.formats__item-item {
+  padding-left: 40px;
+  position: relative;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 300;
+  margin-bottom: 32px;
+  position: relative;
+
+  @media (max-width: 575px) {
+    font-size: 17px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    content: url('/src/img/icons/formats-list.png');
+    left: 0px;
+    position: absolute;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

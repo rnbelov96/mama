@@ -28,3 +28,32 @@
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
 }
+
+@mixin title {
+  text-align: center;
+  font-family: 'ProximaSoft';
+  color: $green;
+  font-size: 60px;
+  line-height: 68px;
+
+  @media (max-width: 991px) {
+    line-height: 55px;
+    font-size: 55px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 767px) {
+    line-height: 50px;
+    font-size: 45px;
+  }
+
+  @media (max-width: 575px) {
+    line-height: 43px;
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+
+  span {
+    color: $red;
+  }
+}
