@@ -1,5 +1,13 @@
 .calc {
   padding-bottom: 593px;
+
+  @media (max-width: 1200px) {
+    padding-bottom: 192px;
+  }
+
+  @media (max-width: 575px) {
+    padding-bottom: 90px;
+  }
 }
 
 .calc__title {
@@ -14,6 +22,15 @@
   display: flex;
   justify-content: center;
   gap: 140px;
+
+  @media (max-width: 1300px) {
+    gap: 30px;
+  }
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .calc__calc-box {
@@ -23,6 +40,10 @@
 .calc__tab-box {
   display: flex;
   gap: 30px;
+
+  @media (max-width: 575px) {
+    gap: 15px;
+  }
 }
 
 .calc__tab {
@@ -39,6 +60,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 991px) {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 24px;
+  }
 
   &_active {
     opacity: 1;
@@ -58,6 +87,18 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 65px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 870px) {
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 575px) {
+    margin-bottom: 40px;
+  }
 }
 
 .calc__input-label {
@@ -91,6 +132,12 @@
     #d5efff 100%
   );
   background-color: #d5efff;
+
+  @media (max-width: 870px) {
+    max-width: 100%;
+    order: 3;
+    margin-top: 30px;
+  }
 
   &:focus {
     outline: none;
@@ -175,6 +222,16 @@
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 58px;
+  text-align: center;
+
+  @media (max-width: 1200px) {
+    margin-bottom: 20px;
+    color: black;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 27px;
+  }
 }
 
 .calc__result {
@@ -186,11 +243,27 @@
   position: relative;
   text-align: center;
 
+  @media (max-width: 1450px) {
+    font-size: 54px;
+  }
+
+  @media (max-width: 1200px) {
+    color: #ceb302;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 35px;
+  }
+
   &::before {
     position: absolute;
     content: url('/src/img/bgs/calc-bg.png');
     top: -239px;
     left: -90px;
     z-index: -1;
+
+    @media (max-width: 1200px) {
+      content: none;
+    }
   }
 }

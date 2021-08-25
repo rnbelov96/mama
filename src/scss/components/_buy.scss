@@ -1,0 +1,89 @@
+.buy {
+  padding-bottom: 148px;
+
+  @media (max-width: 1200px) {
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 991px) {
+    padding-bottom: 30px;
+  }
+}
+
+.buy__title {
+  @include title;
+  @include max-width(1200px);
+  margin-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  color: $red;
+  position: relative;
+
+  @media (max-width: 1300px) {
+    br {
+      display: none;
+    }
+  }
+
+  &::before {
+    content: url('/src/img/buy-dish.png');
+    position: absolute;
+    left: -362px;
+    top: -559px;
+
+    @media (max-width: 1200px) {
+      content: none;
+    }
+  }
+
+  &::after {
+    content: url('/src/img/bgs/buy-bg.png');
+    z-index: -1;
+    position: absolute;
+    left: -200px;
+    top: -279px;
+
+    @media (max-width: 1200px) {
+      top: -194px;
+    }
+
+    @media (max-width: 575px) {
+      top: -164px;
+    }
+  }
+}
+
+.buy__text {
+  @include max-width(605px);
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'ProximaSoft';
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  position: relative;
+  text-align: center;
+
+  @media (max-width: 575px) {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    width: 203px;
+    height: 10px;
+    background-color: #6fbe39;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    left: -240px;
+  }
+
+  &::after {
+    right: -240px;
+  }
+}

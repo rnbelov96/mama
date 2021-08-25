@@ -1,0 +1,133 @@
+.help {
+  padding-bottom: 145px;
+
+  @media (max-width: 1450px) {
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: 1200px) {
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 991px) {
+    padding-bottom: 30px;
+  }
+}
+
+.help__title {
+  @include title;
+  @include max-width(1380px);
+  margin-bottom: 57px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.help__list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: url('/src/img/help-cheese.png');
+    left: -467px;
+    top: 475px;
+    z-index: -1;
+    @media (max-width: 1230px) {
+      content: none;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: url('/src/img/help-dish.png');
+    right: -241px;
+    top: -100px;
+    z-index: -1;
+    @media (max-width: 1230px) {
+      content: none;
+    }
+  }
+}
+
+.help__item {
+  width: 47.1%;
+  margin-bottom: 65px;
+
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:nth-child(1) .help__item-title::before {
+    content: url('/src/img/help-leaf-right.png');
+  }
+  &:nth-child(2) .help__item-title::before {
+    content: url('/src/img/help-leaf-right.png');
+  }
+  &:nth-child(3) .help__item-title::before {
+    content: url('/src/img/help-leaf-left.png');
+  }
+  &:nth-child(4) .help__item-title::before {
+    content: url('/src/img/help-leaf-left.png');
+  }
+  &:nth-child(5) .help__item-title::before {
+    content: url('/src/img/help-leaf-right.png');
+  }
+  &:nth-child(6) .help__item-title::before {
+    content: url('/src/img/help-leaf-right.png');
+  }
+  &:nth-child(7) .help__item-title::before {
+    content: url('/src/img/help-leaf-left.png');
+  }
+  &:nth-child(8) .help__item-title::before {
+    content: url('/src/img/help-leaf-left.png');
+  }
+  &:nth-child(9) {
+    margin-bottom: 0;
+
+    @media (max-width: 991px) {
+      margin-bottom: 65px;
+    }
+
+    .help__item-title::before {
+      content: url('/src/img/help-leaf-right.png');
+    }
+  }
+  &:nth-child(10) .help__item-title::before {
+    content: url('/src/img/help-leaf-right.png');
+  }
+}
+
+.help__item-title {
+  padding-left: 85px;
+  position: relative;
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 37px;
+  color: $red;
+
+  &::before {
+    position: absolute;
+    left: -31px;
+    top: -22px;
+  }
+}
+
+.help__item-text {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26px;
+  margin-bottom: 0;
+
+  @media (max-width: 1230px) {
+    br {
+      display: none;
+    }
+  }
+}
