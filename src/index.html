@@ -69,7 +69,7 @@
           <button class="button button_present js_present">
             Получить презентацию
           </button>
-          <form class="line-form line-form_desc">
+          <form class="line-form line-form_desc line-form_cutlery">
             <h3 class="line-form__title">
               Оставьте заявку на презентацию франшизы и финансовую модель
             </h3>
@@ -274,7 +274,7 @@
             Производство и продажа полуфабрикатов — перспективная отрасль,
             особенно если выходить на рынок при поддержке сильного партнёра.
           </p>
-          <form class="line-form line-form_earn">
+          <form class="line-form line-form_earn line-form_pencil">
             <h3 class="line-form__title">
               Начните бизнес в сфере полуфабрикатов по понятной стратегии
             </h3>
@@ -488,7 +488,7 @@
             отсутствию посредников и дополнительных наценок зарабатываем даже
             при ручном производстве.
           </p>
-          <form class="line-form line-form_earn">
+          <form class="line-form line-form_pencil">
             <h3 class="line-form__title">
               Начните бизнес в сфере полуфабрикатов по понятной стратегии
             </h3>
@@ -527,7 +527,8 @@
       <section class="catalog">
         <div class="container">
           <h2 class="catalog__title">
-            Каталог продукции: <br> <span>сочно, вкусно, разнообразно</span>
+            Каталог продукции: <br />
+            <span>сочно, вкусно, разнообразно</span>
           </h2>
           <div class="catalog__gallery">
             <div class="catalog__left-side">
@@ -580,6 +581,153 @@
                 alt="Блюдо"
                 class="catalog__1-bottom-item"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="numbers">
+        <div class="container">
+          <h2 class="numbers__title">
+            <span>Финансовые показатели</span> <br />
+            на примере работающей точки
+          </h2>
+          <ul class="numbers__list">
+            <li class="numbers__item">
+              <p class="numbers__item-title">Магазин</p>
+              <div class="numbers__item-text-box">
+                <p class="numbers__label">Средняя ежемесячная выручка</p>
+                <p class="numbers__number">
+                  от 750&nbsp;000 до 1&nbsp;100&nbsp;000 ₽
+                </p>
+              </div>
+              <div class="numbers__item-text-box">
+                <p class="numbers__label">Средняя ежемесячная чистая прибыль</p>
+                <p class="numbers__number">от 100&nbsp;000 до 150&nbsp;000 ₽</p>
+              </div>
+              <div class="numbers__item-text-box">
+                <p class="numbers__label">
+                  Среднее количество покупателей в день
+                </p>
+                <p class="numbers__number">50 человек</p>
+              </div>
+              <div class="numbers__item-text-box">
+                <p class="numbers__label">Средний чек</p>
+                <p class="numbers__number">700 ₽</p>
+              </div>
+            </li>
+            <li class="numbers__item">
+              <p class="numbers__item-title">Производство + магазин</p>
+              <div class="numbers__item-text-box">
+                <p class="numbers__label">Средняя ежемесячная выручка</p>
+                <p class="numbers__number">
+                  от 750&nbsp;000 до 1&nbsp;100&nbsp;000 ₽
+                </p>
+              </div>
+              <div class="numbers__item-text-box">
+                <p class="numbers__label">Средняя ежемесячная чистая прибыль</p>
+                <p class="numbers__number">от 200&nbsp;000 до 250&nbsp;000 ₽</p>
+              </div>
+              <div class="numbers__item-text-box">
+                <p class="numbers__label">
+                  Среднее количество покупателей в день
+                </p>
+                <p class="numbers__number">50 человек</p>
+              </div>
+              <div class="numbers__item-text-box">
+                <p class="numbers__label">Средний чек</p>
+                <p class="numbers__number">700 ₽</p>
+              </div>
+            </li>
+          </ul>
+
+          <form class="line-form line-form_cutlery">
+            <h3 class="line-form__title">
+              Зарабатывайте на полуфабрикатах со всесезонным спросом
+            </h3>
+            <div class="line-form__input-list">
+              <input
+                type="text"
+                placeholder="Имя"
+                name="name"
+                data-type="name"
+                class="line-form__input"
+              /><input
+                type="text"
+                placeholder="Телефон"
+                name="phone"
+                data-type="phone"
+                class="line-form__input"
+              /><input
+                type="email"
+                placeholder="E-mail"
+                name="email"
+                data-type="email"
+                class="line-form__input"
+              /><button class="button button_line-form">
+                Присоединиться к&nbsp;сети
+              </button>
+            </div>
+            <p class="line-form__policy">
+              Я подтверждаю, что ознакомлен, и даю согласие на обработку
+              персональных данных на условиях и для целей, определяемых
+              <button type="button" class="js-policy">
+                Политикой конфиденциальности
+              </button>
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <section class="calc">
+        <div class="container">
+          <h2 class="calc__title">
+            <span>Честный прогноз прибыли:</span>
+             посчитайте, сколько заработаете на полуфабрикатах
+          </h2>
+          <div class="calc__content">
+            <div class="calc__calc-box">
+              <div class="calc__tab-box">
+                <p class="calc__tab calc__tab_active">Магазин</p>
+                <p class="calc__tab">Производство + магазин</p>
+              </div>
+              <div class="calc__input-box">
+                <p class="calc__input-label">Покупателей в день</p>
+                <input
+                  type="range"
+                  min="1"
+                  max="5"
+                  step="1"
+                  class="calc__input js-range js-customer-range"
+                />
+                <p class="calc__input-value"><span class="js-customer-value">45</span></p>
+              </div>
+              <div class="calc__input-box">
+                <p class="calc__input-label">Средний чек</p>
+                <input
+                  type="range"
+                  min="1"
+                  max="5"
+                  step="1"
+                  class="calc__input js-range js-check-range"
+                />
+                <p class="calc__input-value"><span class="js-check-value">700</span> ₽</p>
+              </div>
+              <div class="calc__input-box">
+                <p class="calc__input-label">Срок работы</p>
+                <input
+                  type="range"
+                  min="1"
+                  max="5"
+                  step="1"
+                  class="calc__input js-range js-worktime-range"
+                />
+                <p class="calc__input-value"><span class="js-worktime-value">12</span> <span class="js-month-value">месяцев</spызфт></p>
+              </div>
+            </div>
+            <div class="calc__result-box">
+              <p class="calc__result-label">Ваша прибыль за месяц:</p>
+              <p class="calc__result"><span class="js-calc-result">250 000</span> ₽</p>
             </div>
           </div>
         </div>

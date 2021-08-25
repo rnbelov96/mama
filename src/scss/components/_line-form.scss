@@ -9,7 +9,7 @@
   padding-bottom: 35px;
   position: relative;
 
-  &_desc {
+  &_cutlery {
     &::before {
       content: url('/src/img/cutlery.png');
       right: -39px;
@@ -22,7 +22,7 @@
     }
   }
 
-  &_earn {
+  &_pencil {
     &::before {
       content: url('/src/img/pencil.png');
       right: -319px;
@@ -35,14 +35,14 @@
     }
   }
 
-  @media (max-width: 575px) {
-    padding: 15px;
-  }
-
   &_desc {
     @media (max-width: 575px) {
       display: none;
     }
+  }
+
+  @media (max-width: 575px) {
+    padding: 15px;
   }
 }
 
