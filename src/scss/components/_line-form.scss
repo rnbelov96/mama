@@ -35,6 +35,19 @@
     }
   }
 
+  &_cup {
+    &::before {
+      content: url('/src/img/cup.png');
+      right: -131px;
+      top: -32px;
+      position: absolute;
+      z-index: 0;
+      @media (max-width: 991px) {
+        content: none;
+      }
+    }
+  }
+
   &_desc {
     @media (max-width: 575px) {
       display: none;
