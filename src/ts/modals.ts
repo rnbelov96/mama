@@ -10,6 +10,10 @@ const modalFormInfoList = [
     title: 'на презентацию франшизы и финансовую модель',
     button: 'Получить презентацию',
   },
+  {
+    title: 'и зафиксируйте вашу прибыль',
+    button: 'Зафиксировать прибыль',
+  },
 ];
 
 const closeModal = (modalEl: HTMLDivElement) => {
@@ -29,21 +33,14 @@ const openModal = (modalEl: HTMLDivElement) => {
 const modalElList = document.querySelectorAll('.modal');
 const [formModalEl, policyModalEl, youtubeAdvModalEl] = modalElList;
 
-const formTitleEl = formModalEl.querySelector('span') as HTMLSpanElement;
-const formBtnEl = formModalEl.querySelector('button') as HTMLButtonElement;
+const formTitleEl = formModalEl.querySelector('.js-modal-form-title') as HTMLSpanElement;
+const formBtnEl = formModalEl.querySelector('.js-modal-form-btn') as HTMLButtonElement;
 
 const modalWrapperElList = document.querySelectorAll('.modal__center-wrapper');
 modalElList.forEach(modalEl => {
   modalEl.addEventListener('click', (e: Event) => {
     if (e.target === e.currentTarget || [...modalWrapperElList].includes(e.target as Element)) {
       const clickedModal = e.currentTarget as HTMLDivElement;
-      if (clickedModal === youtubeAdvModalEl) {
-        const iframe = clickedModal.querySelector('iframe');
-        if (iframe) {
-          const iframeSrc = iframe.src;
-          iframe.src = iframeSrc;
-        }
-      }
       closeModal(clickedModal);
     }
   });
@@ -84,7 +81,16 @@ presentBtnElList.forEach(btn => {
   });
 });
 
-const youtubeAdvBtnCallEl = document.querySelector('.js-youtube-adv') as HTMLButtonElement;
-youtubeAdvBtnCallEl.addEventListener('click', () => {
+const incomeBtnElList = document.querySelectorAll('.js-income');
+incomeBtnElList.forEach(btn => {
+  btn.addEventListener('click', () => {
+    formTitleEl.textContent = modalFormInfoList[2].title;
+    formBtnEl.textContent = modalFormInfoList[2].button;
+    openModal(formModalEl as HTMLDivElement);
+  });
+});
+
+const youtubeAdvBtnCallEl = document.querySelector('.js-youtube-adv');
+youtubeAdvBtnCallEl?.addEventListener('click', () => {
   openModal(youtubeAdvModalEl as HTMLDivElement);
 });

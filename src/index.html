@@ -66,7 +66,7 @@
               <div class="shadow"></div>
             </li>
           </ul>
-          <button class="button button_present js_present">
+          <button class="button button_present js-present">
             Получить презентацию
           </button>
           <form class="line-form line-form_desc line-form_cutlery">
@@ -737,6 +737,9 @@
               <p class="calc__result">
                 <span class="js-calc-result">250 000</span>&nbsp;₽
               </p>
+              <button class="button button_calc js-income">
+                Зафиксировать прибыль
+              </button>
             </div>
           </div>
         </div>
@@ -1046,7 +1049,7 @@
           </div>
           <form class="line-form line-form_cup">
             <h3 class="line-form__title">
-              Забронируйте свой город для перспективного бизнеса 
+              Забронируйте свой город для перспективного бизнеса
             </h3>
             <div class="line-form__input-list">
               <input
@@ -1086,26 +1089,86 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__content">
-          <img src="./img/icons/logo.png" alt="Логотип компании" class="footer__logo">
+          <img
+            src="./img/icons/logo.png"
+            alt="Логотип компании"
+            class="footer__logo"
+          />
           <div class="footer__info-box">
             <div class="footer__info">ИП Тимиргалин М.</div>
             <div class="footer__info">ИНН 262807457699</div>
-            <button class="footer__policy js-policy">Политика конфиденциальности</button>
+            <button class="footer__policy js-policy">
+              Политика конфиденциальности
+            </button>
           </div>
           <div class="footer__social">
             <p class="footer__social-text">Мы в соцсетях:</p>
             <a target="_blank" href="#" class="footer__social-img"></a>
           </div>
           <div class="footer__links">
-            <div class="footer__phone-box"><a href="tel:+78008528989" class="footer__phone">8 (800) 852-89-89</a><button class="footer__callback js-callback">Оставить заявку</button></div>
-            <a target="_blank" href="https://франчайзинг5.рф" class="footer__franch">Франчазинг5 - упаковка <br> и продвижение франшиз</a>
+            <div class="footer__phone-box">
+              <a href="tel:+78008528989" class="footer__phone"
+                >8 (800) 852-89-89</a
+              ><button class="footer__callback js-callback">
+                Оставить заявку
+              </button>
+            </div>
+            <a
+              target="_blank"
+              href="https://франчайзинг5.рф"
+              class="footer__franch"
+              >Франчазинг5 - упаковка <br />
+              и продвижение франшиз</a
+            >
           </div>
         </div>
       </div>
     </footer>
 
     <div class="modal">
-      <div class="modal__center-wrapper"></div>
+      <div class="modal__center-wrapper">
+        <form class="modal-form">
+          <h3 class="modal-form__title">
+            Оставьте заявку <span class="js-modal-form-title"></span>
+          </h3>
+          <div class="modal-form__input-list">
+            <input
+              type="text"
+              placeholder="Имя"
+              name="name"
+              data-type="name"
+              class="modal-form__input"
+            /><input
+              type="text"
+              placeholder="Телефон"
+              name="phone"
+              data-type="phone"
+              class="modal-form__input"
+            /><input
+              type="email"
+              placeholder="E-mail"
+              name="email"
+              data-type="email"
+              class="modal-form__input"
+            /><button class="button button_modal-form js-modal-form-btn">
+              Получить документацию
+            </button>
+          </div>
+          <p class="modal-form__policy">
+            Я подтверждаю, что ознакомлен, и даю согласие на обработку
+            персональных данных на условиях и для целей, определяемых
+            <button type="button" class="js-policy">
+              Политикой конфиденциальности
+            </button>
+          </p>
+          <button
+            data-modal-close=""
+            class="modal__close"
+            title="Закрыть"
+            type="button"
+          ></button>
+        </form>
+      </div>
     </div>
     <div class="modal">
       <div class="priv-policy priv-policy_modal">

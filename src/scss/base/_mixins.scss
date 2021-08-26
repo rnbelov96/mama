@@ -10,6 +10,10 @@
   border: 0;
   color: inherit;
   outline: none;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 @mixin reset-list {

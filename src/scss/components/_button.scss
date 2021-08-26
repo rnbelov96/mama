@@ -16,6 +16,25 @@
   overflow: hidden;
   position: relative;
 
+  &_thanks {
+    @include max-width(260px);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+
+    @media (max-width: 575px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &_calc {
+    @include max-width(260px);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &_present {
     @include max-width(360px);
     display: none;
@@ -31,6 +50,10 @@
     @media (max-width: 991px) {
       @include max-width(600px);
     }
+  }
+
+  &_modal-form {
+    @include max-width(600px);
   }
 
   &:hover {
