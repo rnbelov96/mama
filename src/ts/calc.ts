@@ -48,7 +48,7 @@ const calcResult = () => {
 tabElList.forEach(tab => {
   tab.addEventListener('click', (e: Event) => {
     const clickedTab = e.currentTarget as HTMLParagraphElement;
-    if (clickedTab.classList.contains('.calc__tab_active')) {
+    if (clickedTab.classList.contains('calc__tab_active')) {
       return;
     }
 

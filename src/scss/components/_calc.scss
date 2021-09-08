@@ -39,7 +39,7 @@
 
 .calc__tab-box {
   display: flex;
-  gap: 30px;
+  gap: 23px;
 
   @media (max-width: 575px) {
     gap: 15px;
@@ -49,18 +49,34 @@
 .calc__tab {
   cursor: pointer;
   font-size: 35px;
+  min-height: 89px;
+  padding-left: 32px;
+  padding-right: 32px;
+  background: rgb(29, 99, 196);
+  background: linear-gradient(
+    29deg,
+    rgba(29, 99, 196, 1) 37%,
+    rgba(0, 180, 255, 1) 83%
+  );
+  box-shadow: 0px 15px 20px 0 rgba(30, 95, 193, 0.25);
+  border-radius: 30px;
   font-family: 'ProximaSoft';
   font-weight: bold;
   margin-bottom: 80px;
-  padding-bottom: 18px;
-  border-bottom: 10px solid #6fbe39;
-  opacity: 0.5;
   position: relative;
-  @include max-width(413px);
+  width: 100%;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+
+  &:first-child {
+    @include max-width(362px);
+  }
+  &:last-child {
+    @include max-width(479px);
+  }
 
   @media (max-width: 991px) {
     margin-bottom: 50px;
@@ -68,17 +84,26 @@
 
   @media (max-width: 575px) {
     font-size: 24px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   &_active {
-    opacity: 1;
+    box-shadow: inset 0px 4px 0 0 #c7d7ef;
+    color: black;
+    background-image: none;
+    background-color: #bfecff;
 
     &::before {
       position: absolute;
       content: url('/src/img/icons/triangle.png');
       left: 50%;
       transform: translateX(-50%);
-      bottom: -30px;
+      bottom: -25px;
+
+      @media (max-width: 575px) {
+        bottom: -23px;
+      }
     }
   }
 }
