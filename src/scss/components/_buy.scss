@@ -42,6 +42,7 @@
     position: absolute;
     left: -200px;
     top: -279px;
+    pointer-events: none;
 
     @media (max-width: 1200px) {
       top: -194px;

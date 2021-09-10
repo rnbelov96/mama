@@ -5,15 +5,15 @@ const openedModalList: Element[] = [];
 
 const modalFormInfoList = [
   {
-    title: 'на бесплатную консультацию',
+    title: 'Оставьте заявку на бесплатную консультацию',
     button: 'Получить консультацию',
   },
   {
-    title: 'на презентацию франшизы и финансовую модель',
-    button: 'Получить презентацию',
+    title: 'Получите презентацию франшизы «Мама балует» и финансовую модель.',
+    button: 'Получить документацию',
   },
   {
-    title: 'и зафиксируйте вашу прибыль',
+    title: 'Оставьте заявку и зафиксируйте вашу прибыль',
     button: 'Зафиксировать прибыль',
   },
 ];
@@ -35,7 +35,7 @@ const openModal = (modalEl: HTMLDivElement) => {
 const modalElList = document.querySelectorAll('.modal');
 const [formModalEl, policyModalEl, youtubeAdvModalEl] = modalElList;
 
-const formTitleEl = formModalEl.querySelector('.js-modal-form-title') as HTMLSpanElement;
+const formTitleEl = formModalEl.querySelector('.modal-form__title') as HTMLSpanElement;
 const formBtnEl = formModalEl.querySelector('.js-modal-form-btn') as HTMLButtonElement;
 
 const modalWrapperElList = document.querySelectorAll('.modal__center-wrapper');
