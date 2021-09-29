@@ -156,6 +156,10 @@
     background-image: url('/src/img/icons/desc/2.png');
     background-position: 265px 9px;
 
+    @media (max-width: 991px) {
+      background-position: 315px 9px;
+    }
+
     @media (max-width: 575px) {
       background-image: none;
     }
@@ -164,6 +168,10 @@
   &:nth-child(3) {
     background-image: url('/src/img/icons/desc/3.png');
     background-position: 274px 6px;
+
+    @media (max-width: 991px) {
+      background-position: 306px 6px;
+    }
 
     @media (max-width: 575px) {
       background-image: none;
