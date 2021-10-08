@@ -5,7 +5,7 @@ const openedModalList: Element[] = [];
 
 const modalFormInfoList = [
   {
-    title: 'Оставьте заявку на бесплатную консультацию',
+    title: 'Получите бесплатную консультацию',
     button: 'Получить консультацию',
   },
   {
@@ -13,7 +13,7 @@ const modalFormInfoList = [
     button: 'Получить документацию',
   },
   {
-    title: 'Оставьте заявку и зафиксируйте вашу прибыль',
+    title: 'Зафиксируйте свою прибыль',
     button: 'Зафиксировать прибыль',
   },
 ];
@@ -23,9 +23,13 @@ const closeModal = (modalEl: HTMLDivElement) => {
   modalEl.style.overflowY = 'inherit';
   modalEl.style.pointerEvents = 'none';
   document.body.style.overflowY = 'auto';
+  document.body.style.paddingRight = '0px';
 };
 
 const openModal = (modalEl: HTMLDivElement) => {
+  if (window.innerWidth > document.body.clientWidth) {
+    document.body.style.paddingRight = `${window.innerWidth - document.body.clientWidth}px`;
+  }
   modalEl.style.opacity = '1';
   modalEl.style.overflowY = 'auto';
   modalEl.style.pointerEvents = 'auto';
